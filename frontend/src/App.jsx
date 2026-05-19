@@ -24,9 +24,11 @@ const App = () => {
       try {
         const response = await axios.get(
           "http://18.215.34.4:4000/api/v1/user/getuser",
-          {
-            withCredentials: true,
-          }
+         {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
         );
         setUser(response.data.user);
         setIsAuthorized(true);
