@@ -50,7 +50,6 @@ export const logout = catchAsyncErrors(async (req, res, next) => {
     .cookie("token", "", {
       httpOnly: true,
       secure: false,
-      sameSite: "Lax",
       expires: new Date(Date.now()),
     })
     .json({
