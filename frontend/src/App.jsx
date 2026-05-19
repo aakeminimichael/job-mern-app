@@ -23,7 +23,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/user/getuser",
+          "http://18.215.34.4:4000/api/v1/user/getuser",
           {
             withCredentials: true,
           }
