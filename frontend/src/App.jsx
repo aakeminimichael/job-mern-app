@@ -23,7 +23,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://18.215.34.4:4000/api/v1/user/getuser",
+          `${import.meta.env.VITE_API_URL}/api/v1/user/getuser`,
          {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
